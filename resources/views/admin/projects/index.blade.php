@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-4">
-        <h3 class="text-center">La lista dei progetti</h3>
+        <h3 class="text-center">Lista dei progetti</h3>
         <div class="text-end">
             <a class="btn btn-success" href="{{ route('admin.projects.create') }}">
                 Nuovo progetto
@@ -10,11 +10,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-8">
-                @if (session('message'))
-                    <div class="alert alert-success">
-                        {{ session('message') }}
-                    </div>
-                @endif
+                @include('partials.messages')
                 <table class="table">
                     <thead>
                         <tr>
